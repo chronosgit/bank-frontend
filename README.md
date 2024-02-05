@@ -1,2 +1,3 @@
-# bank-frontend
+# Bank application
+
 Frontend part for bank application
