@@ -1,3 +1,4 @@
 .header {
-    
+    max-width: var(--xl);
+    margin-inline: auto;
 }
