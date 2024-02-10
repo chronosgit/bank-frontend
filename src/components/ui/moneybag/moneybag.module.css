@@ -1,0 +1,5 @@
+.moneybag {
+    --size: 1rem;
+    max-width: var(--size);
+    max-height: var(--size);
+}

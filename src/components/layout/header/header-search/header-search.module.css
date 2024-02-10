@@ -1,0 +1,5 @@
+.search {
+    --size: 1.2rem;
+    max-width: var(--size);
+    max-height: var(--size);
+}

@@ -1,0 +1,25 @@
+.link_list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link_primary,
+.link_secondary {
+    transition: all 0.2s ease;
+}
+
+.link_primary:hover,
+.link_secondary:hover {
+    color: var(--clr-main-secondary);
+}
+
+.link_primary {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.link_secondary {
+
+}

@@ -1,5 +1,17 @@
 html {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: 
+		-apple-system, 
+		BlinkMacSystemFont,
+		Segoe UI,
+		Roboto,
+		Helvetica,
+		Ubuntu,Cantarell,
+		Arial,
+		sans-serif,
+		Apple Color Emoji,
+		Segoe UI Emoji,
+		Segoe UI Symbol
+	;
 }
 
 :root {
@@ -9,6 +21,10 @@ html {
 	--xl: 80rem;
 	--xxl: 96rem;
 
+	--сlr-main: var(--clr-white); 
+	--clr-main-secondary: var(--clr-gray-600);
+	--clr-bg: var(--clr-black);
+
 	--clr-white: hsl(0, 0%, 100%);
 	--clr-black-pitch: hsl(0, 0%, 0%);
 	--clr-black: hsl(0, 0%, 5%);
@@ -16,6 +32,7 @@ html {
 	--clr-gray-300: hsl(180, 12%, 95%);
 	--clr-gray-400: hsl(220, 10%, 94%);
 	--clr-gray-500: hsl(216, 8%, 88%);
+	--clr-gray-600: hsl(0, 0%, 60%);
 	--clr-red-400: hsl(4, 86%, 54%);
 	--clr-red-500: hsl(6, 82%, 49%);
 	--clr-green-400: hsl(138, 84%, 31%);
@@ -24,6 +41,7 @@ html {
 	--clr-cyan-100: hsl(223, 64%, 92%);
 	--clr-cyan-400: hsl(182, 81%, 79%);
 	--clr-beige-100: hsl(36, 67%, 92%);
+	--clr-pale: rgba(16, 67, 87, 0.13);
 }
 
 * {
@@ -52,4 +70,9 @@ a:visited {
 button {
 	background: none;
 	border: none;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
 }

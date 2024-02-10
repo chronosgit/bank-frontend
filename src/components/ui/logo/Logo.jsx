@@ -10,6 +10,6 @@ const Logo = () => {
             className={styles.img} 
         />
     )
-}
+};
 
 export default Logo;
