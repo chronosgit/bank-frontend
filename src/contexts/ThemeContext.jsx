@@ -1,5 +1,14 @@
-import { createContext } from "react";
+import { extendTheme } from "@chakra-ui/react";
 
-const ThemeContext = createContext({});
+const colors = {
 
-export default ThemeContext;
+};
+
+const config = {
+    initialColorMode: 'light',
+    useSystemColorMode: 'auto',
+};
+
+const theme = extendTheme({config, colors});
+
+export default theme;

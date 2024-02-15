@@ -1,13 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ThemeContext from "./contexts/ThemeContext";
-import useTheme from "./hooks/useTheme";
 import routes from "./router/routes";
 
 const Router = createBrowserRouter(routes);
 
 const AppRouter = () => {
-
-    const [theme] = useTheme();
 
     /* 
         Header & Footer are not outside Router.Provider,
@@ -17,9 +13,7 @@ const AppRouter = () => {
     */
 
     return (
-        <ThemeContext.Provider value={theme}>
-            <RouterProvider router={Router} />
-        </ThemeContext.Provider>
+        <RouterProvider router={Router} />
     )
 }
 
