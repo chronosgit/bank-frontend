@@ -1,7 +1,9 @@
+import Home from "src/pages/home/Home";
+
 const routes = [
     {
         path: "/",
-        element: <p>Home</p>
+        element: <Home />
     }
 ];
 
