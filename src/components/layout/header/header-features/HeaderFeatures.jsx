@@ -1,4 +1,4 @@
-import { Button, HStack, Box } from "@chakra-ui/react";
+import { Button, HStack, Box, useColorModeValue } from "@chakra-ui/react";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import useOppositeThemeColors from "src/hooks/useOppositeThemeColors";
 import SearchExpandable from "src/components/ui/search-expandable/SearchExpandable";
@@ -6,6 +6,7 @@ import SearchExpandable from "src/components/ui/search-expandable/SearchExpandab
 const HeaderFeatures = () => {
 
     const oppositeColors = useOppositeThemeColors();
+    const authBtnHoverColor = useColorModeValue("blue.100", "gray.900");
 
     return (
         <HStack spacing="4" transform="translateY(-0.4rem)">
@@ -18,6 +19,9 @@ const HeaderFeatures = () => {
                 size="sm"
                 fontSize="sm"
                 borderColor={oppositeColors}
+                _hover={{
+                    bgColor: authBtnHoverColor,
+                }}
                 leftIcon={<PlusSquareIcon boxSize="4" />}
             >
                 Присоединиться
