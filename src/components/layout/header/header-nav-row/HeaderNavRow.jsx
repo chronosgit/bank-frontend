@@ -10,9 +10,17 @@ const HeaderNavRow = ({links = [], isPrimary = false}) => {
             links.map((link, i) => 
                 isPrimary 
                 ?
-                    <LinkPrimary key={i} link={link} />
+                    <LinkPrimary 
+                        key={i} 
+                        linkText={link.title} 
+                        linkUrl={link.url} 
+                    />
                 :
-                    <Link key={i} link={link} />
+                    <Link 
+                        key={i}
+                        linkText={link.title} 
+                        linkUrl={link.url} 
+                    />
             )
         }
         </HStack>

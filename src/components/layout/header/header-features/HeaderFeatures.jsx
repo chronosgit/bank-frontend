@@ -2,6 +2,7 @@ import { Button, HStack, Box, useColorModeValue } from "@chakra-ui/react";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import useOppositeThemeColors from "src/hooks/useOppositeThemeColors";
 import SearchExpandable from "src/components/ui/search-expandable/SearchExpandable";
+import ButtonRed from "src/components/ui/buttons/button-red/ButtonRed";
 
 const HeaderFeatures = () => {
 
@@ -27,17 +28,7 @@ const HeaderFeatures = () => {
                 Присоединиться
             </Button>
 
-            <Button
-                size="sm"
-                color="white"
-                bgColor="red.500"
-                fontSize="sm"
-                _hover={{
-                    bgColor: "red.600",
-                }}
-            >
-                Вторая кнопка
-            </Button>
+            <ButtonRed text="Вторая кнопка" size="sm" />
         </HStack>
     )
 };

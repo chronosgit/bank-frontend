@@ -1,24 +1,24 @@
 import { Link as ReactRouterLink } from "react-router-dom";
 import { Link as ChakraLink, Text } from "@chakra-ui/react";
 
-const Link = ({link, parentStyles}) => {
+const Link = ({linkText = "Ссылка", linkUrl, parentStyles}) => {
 
-    if(!link) {
+    if(!linkUrl) {
         return (
-            <Text fontSize="xs" textTransform="uppercase">Битая_ссылка</Text>
+            <Text fontSize="xs" textTransform="uppercase">Пустая_ссылка</Text>
         )
     }
 
     return (
         <ChakraLink 
             as={ReactRouterLink} 
-            to={link.url}
+            to={linkUrl}
             _hover={{
                 color: "gray.500",
             }}
             {...parentStyles}
         >
-            {link.title || "Ссылка"}
+            {linkText}
         </ChakraLink>
     )
 };

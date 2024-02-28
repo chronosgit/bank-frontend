@@ -1,6 +1,6 @@
 import Link from "../link/Link";
 
-const LinkPrimary = ({link}) => {
+const LinkPrimary = ({linkText, linkUrl}) => {
 
     const primaryStyles = {
         position: "relative",
@@ -11,7 +11,11 @@ const LinkPrimary = ({link}) => {
     }
 
     return (
-        <Link link={link} parentStyles={primaryStyles} />
+        <Link 
+            linkText={linkText} 
+            linkUrl={linkUrl} 
+            parentStyles={primaryStyles} 
+        />
     )
 };
 

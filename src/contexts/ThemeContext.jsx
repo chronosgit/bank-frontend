@@ -27,6 +27,7 @@ const styles = {
             bg: 'none',
             border: 'none',
             cursor: 'pointer',
+            overflow: "hidden"
         },
         ul: {
             listStyle: 'none',

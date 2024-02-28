@@ -1,5 +1,7 @@
 import { Center, Container, useColorModeValue } from "@chakra-ui/react";
+import Gallery from "src/components/layout/gallery/Gallery";
 import Header from "src/components/layout/header/Header";
+import galleryItems from "./api/galleryItems";
 
 const Home = () => {
 
@@ -10,6 +12,7 @@ const Home = () => {
             <Container maxW="6xl">
                 <Header />
                 
+                <Gallery items={galleryItems} />
             </Container>
         </Center>
     )
