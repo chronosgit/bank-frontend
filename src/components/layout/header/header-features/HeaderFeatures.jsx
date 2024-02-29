@@ -1,13 +1,20 @@
-import { Button, HStack, Box, useColorModeValue } from "@chakra-ui/react";
+import { useContext } from "react";
+import { Button, HStack, Box } from "@chakra-ui/react";
 import { PlusSquareIcon } from "@chakra-ui/icons";
-import useOppositeThemeColors from "src/hooks/useOppositeThemeColors";
 import SearchExpandable from "src/components/ui/search-expandable/SearchExpandable";
 import ButtonRed from "src/components/ui/buttons/button-red/ButtonRed";
+import HomeThemeContext from "src/pages/home/contexts/HomeThemeContext";
 
 const HeaderFeatures = () => {
 
-    const oppositeColors = useOppositeThemeColors();
-    const authBtnHoverColor = useColorModeValue("blue.100", "gray.900");
+    const {theme} = useContext(HomeThemeContext);
+    const outlinedBtnHoverBgColor = getHoverBgColor();
+
+    function getHoverBgColor() {
+        if(!theme.type) return "";
+        if(theme.type === "light") return "#b8e7e9" // blue
+        if(theme.type === "dark") return "#262626"; // gray
+    }
 
     return (
         <HStack spacing="4" transform="translateY(-0.4rem)">
@@ -19,9 +26,10 @@ const HeaderFeatures = () => {
                 variant="outline"
                 size="sm"
                 fontSize="sm"
-                borderColor={oppositeColors}
+                color={theme.color}
+                borderColor={theme.color}
                 _hover={{
-                    bgColor: authBtnHoverColor,
+                    bgColor: outlinedBtnHoverBgColor,
                 }}
                 leftIcon={<PlusSquareIcon boxSize="4" />}
             >
