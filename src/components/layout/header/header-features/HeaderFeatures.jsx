@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Button, HStack, Box } from "@chakra-ui/react";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import SearchExpandable from "src/components/ui/search-expandable/SearchExpandable";
-import ButtonRed from "src/components/ui/buttons/button-red/ButtonRed";
+import ButtonYellow from "src/components/ui/buttons/button-yellow/ButtonYellow";
 import HomeThemeContext from "src/pages/home/contexts/HomeThemeContext";
 
 const HeaderFeatures = () => {
@@ -36,7 +36,7 @@ const HeaderFeatures = () => {
                 Присоединиться
             </Button>
 
-            <ButtonRed text="Вторая кнопка" size="sm" />
+            <ButtonYellow text="Вторая кнопка" size="sm" />
         </HStack>
     )
 };

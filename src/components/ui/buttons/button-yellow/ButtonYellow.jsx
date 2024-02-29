@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 
-const ButtonRed = ({
+const ButtonYellow = ({
     text = "Текст", 
     size = "sm", 
     fontSize = "sm", 
@@ -12,10 +12,10 @@ const ButtonRed = ({
             size={size}
             maxW={maxW}
             color="white"
-            bgColor="red.500"
+            bgColor="yellow.500"
             fontSize={fontSize}
             _hover={{
-                bgColor: "red.600",
+                bgColor: "yellow.600",
             }}
         >
             {text}
@@ -23,4 +23,4 @@ const ButtonRed = ({
     )
 };
 
-export default ButtonRed;
+export default ButtonYellow;
