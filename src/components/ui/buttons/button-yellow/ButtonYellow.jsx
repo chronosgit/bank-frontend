@@ -12,10 +12,10 @@ const ButtonYellow = ({
             size={size}
             maxW={maxW}
             color="white"
-            bgColor="yellow.500"
+            bgColor="red.500"
             fontSize={fontSize}
             _hover={{
-                bgColor: "yellow.600",
+                bgColor: "red.600",
             }}
         >
             {text}
