@@ -1,5 +1,5 @@
 import { Center, Container } from "@chakra-ui/react";
-import Gallery from "src/components/layout/gallery/Gallery";
+import Gallery from "src/pages/home/components/gallery/Gallery";
 import Header from "src/components/layout/header/Header";
 import HomeThemeContext from "./contexts/HomeThemeContext";
 import useHomeTheme from "./hooks/useHomeTheme";
