@@ -1,7 +1,7 @@
 import { Container } from "@chakra-ui/react";
 import GalleryItem from "./gallery-item/GalleryItem";
 import GallerySwitcher from "./gallery-switcher/GallerySwitcher";
-import useActiveGalleryItem from "src/hooks/useActiveGalleryItem";
+import useActiveGalleryItem from "src/pages/home/hooks/useActiveGalleryItem";
 
 const Gallery = ({items}) => {
 

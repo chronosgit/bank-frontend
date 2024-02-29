@@ -1,10 +1,10 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 
 const GallerySwitcherItem = ({
+    itemId,
     isActive, 
     hasRightBorderRadius, 
     hasLeftBorderRadius,
-    itemId,
     onClick,
     title, 
     descr
@@ -12,20 +12,21 @@ const GallerySwitcherItem = ({
 
     const bodyTextColor = useColorModeValue("black", "black");
 
-    const activeItemBodyShadow = useColorModeValue("#e1e1e1", "#000");
-
     const boxStyles = {
         "w": "full",
         "px": "5",
         "py": "8",
         "pb": "12",
-        "backgroundColor": "white",
-        "borderInlineStartRadius": hasRightBorderRadius ? "16" : "0",
-        "borderInlineEndRadius": hasLeftBorderRadius ? "16" : "0",
-        "borderRadius": isActive ? "16" : 0,
-        "boxShadow": isActive ? `0 3px 20px ${activeItemBodyShadow}` : 0,
-        "transform": isActive ? "scale(1.1)" : "1",
-        "transition": "transform 0.5s ease, boxShadow 0.1s linear",
+        "borderLeftRadius": hasLeftBorderRadius ? "lg" : "none",
+        "borderRightRadius": hasRightBorderRadius ? "lg" : "none",
+        
+        // Inactive item styles
+        "bgColor": isActive ? "white" : "#f0f3f6",
+
+        // Active item styles
+        "borderRadius": isActive && "lg",
+        "transform": isActive && "scale(1.1)",
+        "transition": "all 0.1s linear",
         "cursor": "pointer",
     };
 
@@ -39,7 +40,7 @@ const GallerySwitcherItem = ({
                 {descr}
             </Text>
         </Box>
-    )
+    );
 };
 
 export default GallerySwitcherItem;
