@@ -8,31 +8,41 @@ const GallerySwitcher = ({
 }) => {
 
     const hStackDivider = <StackDivider 
-                            borderColor="red.100" 
+                            borderColor="gray.300" 
                             align="center"
                           />
+
+    const styles = {
+        pos: "absolute",
+        left: 0,
+        right: 0,
+        bottom: 0,
+        transform: "translateY(6rem)",
+        boxShadow: "md",
+    }
 
     return (
         <HStack 
             spacing="0"
             divider={hStackDivider}
             justifyContent="space-between"
+            {...styles}
         >
         {
-            items.map((item, arrId) => {
+            items.map((item) => {
                 const isActive = (item.id === activeItem.id);
-                const hasRightBorderRadius = (arrId + 1 === items.length);
-                const hasLeftBorderRadius = (arrId === 0);
+                const hasLeftBorderRadius = (item.id === 1);
+                const hasRightBorderRadius = (item.id === items.length);
 
                 return (
                     <GallerySwitcherItem
                         key={item.id}
                         itemId={item.id}
-                        isActive={isActive}
-                        hasRightBorderRadius={hasRightBorderRadius}
-                        hasLeftBorderRadius={hasLeftBorderRadius}
                         title={item.title}
                         descr={item.secondaryDescr}
+                        isActive={isActive}
+                        hasLeftBorderRadius={hasLeftBorderRadius}
+                        hasRightBorderRadius={hasRightBorderRadius}
                         onClick={() => toItemById(item.id)}
                     />
                 )

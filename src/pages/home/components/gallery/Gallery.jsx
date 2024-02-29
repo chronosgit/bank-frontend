@@ -13,7 +13,7 @@ const Gallery = ({items}) => {
     } = useActiveGalleryItem(items);
 
     return (
-        <Container maxW="fill" p="0">
+        <Container maxW="fill" p="0" pos="relative">
             <GalleryItem item={activeItem} />
 
             <GallerySwitcher 
