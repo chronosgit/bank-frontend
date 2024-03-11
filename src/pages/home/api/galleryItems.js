@@ -1,10 +1,10 @@
 const galleryItems = [
     {
         id: 1,
-        title: "Заголовок",
-        descr: "Тут описание услуги, всякие там плюсы и т.д.",
-        secondaryDescr: "Еще одно описание",
-        btnText: "Текст кнопки",
+        title: "Карты",
+        descr: "Откройте собственную карту уже сегодня",
+        secondaryDescr: "Две карты на ваш выбор: дебетная и кредитная",
+        btnText: "Открыть",
         bgUrl: "src/assets/images/home/bg1.webp",
         url: "/",
     },

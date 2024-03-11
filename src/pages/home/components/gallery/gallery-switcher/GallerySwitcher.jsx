@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { HStack, StackDivider } from "@chakra-ui/react";
 import GallerySwitcherItem from "../gallery-switcher-item/GallerySwitcherItem";
 
@@ -7,10 +8,14 @@ const GallerySwitcher = ({
     toItemById
 }) => {
 
-    const hStackDivider = <StackDivider 
-                            borderColor="gray.300" 
-                            align="center"
-                          />
+    const gallerySwitcherRef = useRef();
+    
+    const hStackDivider = (
+        <StackDivider 
+            borderColor="gray.300" 
+            align="center"
+        />
+    );
 
     const styles = {
         pos: "absolute",
@@ -24,6 +29,7 @@ const GallerySwitcher = ({
 
     return (
         <HStack 
+            ref={gallerySwitcherRef}
             spacing="0"
             divider={hStackDivider}
             justifyContent="space-between"
@@ -37,7 +43,8 @@ const GallerySwitcher = ({
 
                 return (
                     <GallerySwitcherItem
-                        key={item.id}
+                        key={item.id}s
+                        parentRef={gallerySwitcherRef}
                         itemId={item.id}
                         title={item.title}
                         descr={item.secondaryDescr}

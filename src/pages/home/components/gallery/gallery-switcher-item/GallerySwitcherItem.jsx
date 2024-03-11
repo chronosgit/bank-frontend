@@ -1,9 +1,11 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import { useContext } from "react";
 import FlashAnimationContext from "src/pages/home/contexts/FlashAnimationContext";
+import getElementDimensions from "src/utils/getElementDimensions";
 
 const GallerySwitcherItem = ({
     itemId,
+    parentRef,
     title, 
     descr,
     isActive,
@@ -16,8 +18,11 @@ const GallerySwitcherItem = ({
 
     const bodyTextColor = useColorModeValue("black", "black");
 
+    const {height} = getElementDimensions(parentRef.current); 
+
     const boxStyles = {
         "w": "full",
+        "h": height,
         "px": "5",
         "py": "8",
         "pb": "12",
