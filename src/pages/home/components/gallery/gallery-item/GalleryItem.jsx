@@ -5,7 +5,10 @@ import LinkHeading from "src/components/ui/links/link-heading/LinkHeading";
 const GalleryItem = ({item}) => {
 
     return (
-        <Flex align="center">
+        <Flex 
+            pos="relative"
+            align="center"
+        >
             <Flex
                 maxW="40%"
                 flexDirection="column"
@@ -34,6 +37,7 @@ const GalleryItem = ({item}) => {
             <Image
                 src={item.bgUrl}
                 alt=""
+                draggable={false}
             />
         </Flex>
     )

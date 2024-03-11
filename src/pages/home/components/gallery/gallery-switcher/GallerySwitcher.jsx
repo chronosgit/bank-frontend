@@ -17,6 +17,7 @@ const GallerySwitcher = ({
         left: 0,
         right: 0,
         bottom: 0,
+        zIndex: 999,
         transform: "translateY(6rem)",
         boxShadow: "md",
     }
