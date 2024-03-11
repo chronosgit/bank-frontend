@@ -33,10 +33,10 @@ const HeaderFeatures = () => {
                 }}
                 leftIcon={<PlusSquareIcon boxSize="4" />}
             >
-                Присоединиться
+                Стань клиентом
             </Button>
 
-            <ButtonYellow text="Вторая кнопка" size="sm" />
+            <ButtonYellow text="Войти" size="sm" />
         </HStack>
     )
 };
