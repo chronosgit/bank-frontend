@@ -4,6 +4,6 @@
       "paths": {
         "src/*": ["./src/*"],
         "public/*": ["./public/*"],
-      }
+      },
     }
   }

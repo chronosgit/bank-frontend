@@ -1,4 +1,6 @@
 import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { useContext } from "react";
+import FlashAnimationContext from "src/pages/home/contexts/FlashAnimationContext";
 
 const GallerySwitcherItem = ({
     itemId,
@@ -9,6 +11,8 @@ const GallerySwitcherItem = ({
     hasLeftBorderRadius,
     onClick,
 }) => {
+
+    const {triggerAnimation} = useContext(FlashAnimationContext);
 
     const bodyTextColor = useColorModeValue("black", "black");
 
@@ -31,8 +35,15 @@ const GallerySwitcherItem = ({
         "cursor": "pointer",
     };
 
+    const onItemClick = () => {
+        // onClick of for gallery-switcher
+        onClick(itemId);
+
+        triggerAnimation(itemId);
+    }
+
     return (
-        <Box {...boxStyles} onClick={() => onClick(itemId)}>
+        <Box {...boxStyles} onClick={onItemClick}>
             <Text color="red.500" fontWeight="semibold">
                 {title}
             </Text>
