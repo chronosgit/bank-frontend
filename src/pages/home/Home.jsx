@@ -14,8 +14,11 @@ const Home = () => {
     const [theme, toggleTheme] = useHomeTheme();
     const themeController = {theme, toggleTheme};
 
-    const [isActive, triggerAnimation] = useFlashAnimation();
-    const flashAnimationController = {isActive, triggerAnimation};
+    const [isFlashAnimationActive, triggerFlashAnimation] = useFlashAnimation();
+    const flashAnimationController = {
+        isFlashAnimationActive, 
+        triggerFlashAnimation
+    };
 
     return (
         <HomeThemeContext.Provider value={themeController}>
@@ -28,7 +31,7 @@ const Home = () => {
 
                         {
                         // onClick flash animation controller
-                        isActive &&
+                        isFlashAnimationActive &&
                             <AbsoluteWrapper zIndex={2}>
                                 <Flash />
                             </AbsoluteWrapper>
