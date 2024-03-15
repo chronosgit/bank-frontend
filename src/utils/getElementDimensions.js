@@ -1,5 +1,5 @@
 const getElementDimensions = (el) => {
-    if(!el || !(el instanceof HTMLElement)) return;
+    if(!el || !(el instanceof HTMLElement)) return {};
 
     const width = el.offsetWidth;
     const height = el.offsetHeight;

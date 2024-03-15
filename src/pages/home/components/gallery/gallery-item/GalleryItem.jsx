@@ -1,5 +1,5 @@
 import { Flex, Image, Spacer, Text } from "@chakra-ui/react";
-import ButtonRed from "src/components/ui/buttons/button-yellow/ButtonYellow";
+import ButtonRed from "src/components/ui/buttons/button-red/ButtonRed";
 import LinkHeading from "src/components/ui/links/link-heading/LinkHeading";
 
 const GalleryItem = ({item}) => {

@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react";
 
-const ButtonYellow = ({
+const ButtonRed = ({
     text = "Текст", 
     size = "sm", 
     fontSize = "sm", 
@@ -23,4 +23,4 @@ const ButtonYellow = ({
     )
 };
 
-export default ButtonYellow;
+export default ButtonRed;

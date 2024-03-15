@@ -5,7 +5,7 @@ import getElementDimensions from "src/utils/getElementDimensions";
 
 const GallerySwitcherItem = ({
     itemId,
-    parentRef,
+    parentEl,
     title, 
     descr,
     isActive,
@@ -14,15 +14,15 @@ const GallerySwitcherItem = ({
     onClick,
 }) => {
 
-    const {triggerAnimation} = useContext(FlashAnimationContext);
+    const {triggerFlashAnimation} = useContext(FlashAnimationContext);
 
     const bodyTextColor = useColorModeValue("black", "black");
 
-    const {height} = getElementDimensions(parentRef.current); 
-
+    const {height} = getElementDimensions(parentEl); 
+    
     const boxStyles = {
         "w": "full",
-        "h": height,
+        "h": height || "auto",
         "px": "5",
         "py": "8",
         "pb": "12",
@@ -44,7 +44,7 @@ const GallerySwitcherItem = ({
         // onClick of for gallery-switcher
         onClick(itemId);
 
-        triggerAnimation(itemId);
+        triggerFlashAnimation(itemId);
     }
 
     return (
