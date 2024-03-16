@@ -1,20 +1,9 @@
 import { Box } from "@chakra-ui/react";
-import { keyframes } from '@emotion/react'
 import LoginForm from "src/components/layout/login-form/LoginForm";
 import RegisterForm from "src/components/layout/register-form/RegisterForm";
-import useBoolean from "src/hooks/useBoolean";
 import RedBox from "./red-box/RedBox";
 
-const Register = ({isLogin: initIsLogin}) => {
-    
-    const [isLogin, toggleLogin] = useBoolean(initIsLogin);
-
-    const pageStyles = {
-        display: "flex",
-        flexDirection: isLogin ? "row" : "row-reverse",
-        justifyContent: "space-between",
-        alignItems: "center",
-    };
+const Register = ({isLogin}) => {
 
     const authBoxStyles = {
         pos: "relative",
@@ -24,23 +13,14 @@ const Register = ({isLogin: initIsLogin}) => {
         m: "0 auto",
     };
 
-    // const loginSlideAnimation = keyframes`
-    //     0% {}
-
-    //     50% {
-    //         left: "10rem";
-    //     }
-
-    //     100% {
-    //         opacity: 0;
-    //     }
-    // `
-
     return (
         <Box 
             h="100vh"
+            display="flex"
+            flexDirection={isLogin ? "row" : "row-reverse"}
+            justifyContent="space-between"
+            alignItems="center"
             overflowY="hidden"
-            {...pageStyles}
         >
         {
             isLogin
@@ -57,10 +37,7 @@ const Register = ({isLogin: initIsLogin}) => {
                     
                 )
         }
-            <RedBox 
-                isLogin={isLogin} 
-                toggleLogin={toggleLogin}
-            />
+            <RedBox isLogin={isLogin} />
         </Box>
     );
 };
