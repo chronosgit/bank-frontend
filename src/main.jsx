@@ -14,5 +14,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 		</ChakraProvider>
 	</React.StrictMode>,
 );
-
-// dummy commit
