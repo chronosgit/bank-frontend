@@ -1,13 +1,13 @@
 import { Link as ReactRouterLink } from "react-router-dom";
 import { LinkBox, LinkOverlay, Image } from "@chakra-ui/react";
 
-const Logo = ({size = "14", url="/"}) => {
+const Logo = ({size = "14", redirectUrl="/"}) => {
 
     return (
         <LinkBox as="div" minW={size} >
-            <LinkOverlay as={ReactRouterLink} to={url}>
+            <LinkOverlay as={ReactRouterLink} to={redirectUrl}>
                 <Image 
-                    src="src/assets/images/logo.png" 
+                    src="/src/assets/images/logo.png" 
                     alt="logo" 
                     boxSize={size}
                     borderRadius="50%"
