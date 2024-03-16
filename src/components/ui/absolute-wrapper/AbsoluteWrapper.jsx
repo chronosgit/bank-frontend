@@ -18,7 +18,11 @@ const AbsoluteWrapper = ({
     };
 
     return (
-        <Box pos="absolute" {...coordStyles}>
+        <Box 
+            pos="absolute"
+            boxSize="fit-content"
+            {...coordStyles}
+        >
             {children}
         </Box>
     );

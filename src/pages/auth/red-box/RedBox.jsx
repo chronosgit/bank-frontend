@@ -1,6 +1,8 @@
-import { AbsoluteCenter, Box, Button, Center, Heading } from "@chakra-ui/react";
+import { AbsoluteCenter, Box, Center, Heading } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import ButtonWhiteOutline from "src/components/ui/buttons/button-white-outline/ButtonWhiteOutline";
 
-const RedBox = ({isLogin, toggleLogin}) => {
+const RedBox = ({isLogin}) => {
 
     const redBoxStyles = {
         pos: "relative",
@@ -26,22 +28,20 @@ const RedBox = ({isLogin, toggleLogin}) => {
                 }
                 </Heading>
 
-                <Center >
-                    <Button
-                        variant="outline"
-                        color="white"
-                        _hover={{
-                            bgColor: "red.700",
-                            borderColor: "red.700",
-                        }}
-                        onClick={toggleLogin}
-                    >
-                    {
-                        isLogin 
-                        ? "Зарегистрироваться"
-                        : "Войти"
-                    }
-                    </Button>
+                <Center>
+                {
+                    isLogin
+                        ? (
+                            <Link to="/auth/register">
+                                <ButtonWhiteOutline text="Зарегистрироваться" />
+                            </Link> 
+                        )
+                        : (
+                            <Link to="/auth/login">
+                                <ButtonWhiteOutline text="Войти" />
+                            </Link> 
+                        )
+                }
                 </Center>
             </AbsoluteCenter>
         </Box>

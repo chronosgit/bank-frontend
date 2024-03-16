@@ -7,7 +7,7 @@ const HeaderNav = () => {
 
     return (
         <HStack spacing="4" >
-            <Logo size="14" href="/" />
+            <Logo size="14" redirectUrl="/" />
 
             <VStack align="flex-start">
                 <HeaderNavRow links={navLinksPrimary} isPrimary />

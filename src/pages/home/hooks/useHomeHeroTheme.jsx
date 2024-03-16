@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useHomeTheme = () => {
+const useHomeHeroTheme = () => {
     const colors = {
         lightModeColor: "black",
         lightModeBgColor: "hsl(182, 84%, 88%)", // light-blue
@@ -35,4 +35,4 @@ const useHomeTheme = () => {
     return [theme, toggleTheme];
 };
 
-export default useHomeTheme;
+export default useHomeHeroTheme;

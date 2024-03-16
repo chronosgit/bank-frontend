@@ -3,7 +3,8 @@ import {
     FormControl, FormLabel, 
     VStack, Input, Text, InputGroup, 
     InputRightElement, Alert, 
-    AlertIcon, UnorderedList, ListItem, Spinner, 
+    AlertIcon, UnorderedList, ListItem, 
+    Spinner, useToast, 
 } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import LoginFormHeader from "./login-form-header/LoginFormHeader";
@@ -13,6 +14,8 @@ import useLogin from "./hooks/useLogin";
 
 const RegisterForm = () => {
 
+    const forgotPwdToast = useToast();
+
     const {
         formData, errors, 
         isLoading, funcs,
@@ -20,6 +23,16 @@ const RegisterForm = () => {
     } = useLogin();
 
     const [isPwdVisible, togglePwdVisible] = useBoolean(false);
+
+    const forgotPwdOnClick = () => {
+        forgotPwdToast({
+            title: "Не получилось...",
+            description: "Такого функционала на сервере пока нету:(",
+            status: "error",
+            duration: 10000,
+            isClosable: true,
+        });
+    }
 
     return (
         <VStack spacing="1rem" textAlign="center">
@@ -116,6 +129,7 @@ const RegisterForm = () => {
                     tabIndex="0"
                     color="blue.500"
                     cursor="pointer"
+                    onClick={forgotPwdOnClick}
                 >
                     Забыли пароль?
                 </Text>
