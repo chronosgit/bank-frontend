@@ -17,6 +17,7 @@ const Register = ({isLogin}) => {
 
     return (
         <Box 
+            pos="relative"
             h="100vh"
             display="flex"
             flexDirection={isLogin ? "row" : "row-reverse"}
@@ -27,7 +28,6 @@ const Register = ({isLogin}) => {
             <AbsoluteWrapper
                 top="0.5rem"
                 left="0.5rem"
-                zIndex="-1"
             >
                 <Logo redirectUrl="/" />
             </AbsoluteWrapper>
