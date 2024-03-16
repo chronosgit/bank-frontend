@@ -1,8 +1,9 @@
-import { Center, Container } from "@chakra-ui/react";
+import { Center } from "@chakra-ui/react";
 import AbsoluteWrapper from "src/components/ui/absolute-wrapper/AbsoluteWrapper";
 import Flash from "src/components/ui/flash/Flash";
 import Header from "src/components/layout/header/Header";
 import Gallery from "../gallery/Gallery";
+import Container from "src/components/layout/container/Container";
 import FlashAnimationContext from "../../contexts/FlashAnimationContext";
 import HomeThemeContext from "../../contexts/HomeThemeContext";
 import useFlashAnimation from "../../hooks/useFlashAnimation";
@@ -34,12 +35,12 @@ const HomeHero = () => {
         <HomeThemeContext.Provider value={themeController}>
             <FlashAnimationContext.Provider value={flashAnimationController}>
                 <Center 
-                    mb="10rem" // cuz gallery-switcher pushes into the bottom
+                    mb="15rem" // cuz gallery-switcher pushes into the bottom
                     py="6" 
                     color={theme.color} 
                     bgColor={theme.bgColor} 
                 >
-                    <Container maxW="6xl">
+                    <Container>
                         <Header />
 
                         <Gallery items={galleryItems} />
